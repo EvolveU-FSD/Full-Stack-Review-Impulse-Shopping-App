@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
 import { Typography, List, ListItem, ListItemText, Button } from '@mui/material';
+import { CheckoutButton } from '../components/checkoutbutton';
 
 const Cart = () => {
   const { cart, removeFromCart } = useCart();
@@ -23,7 +24,8 @@ const Cart = () => {
           Continue Shopping Like an Idiot.
         </Button>
       </Link>
-    </div>
+          <CheckoutButton />
+        </div>
   );
 };
 
