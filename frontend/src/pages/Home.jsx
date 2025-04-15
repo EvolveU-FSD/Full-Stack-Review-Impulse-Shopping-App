@@ -36,7 +36,7 @@ const Home = () => {
       </Grid>
       <Link to="/cart">
         <Button variant="contained" color="primary" style={{ marginTop: '20px' }}>
-          View Cart
+        <img src="https://img.icons8.com/?size=100&id=59997&format=png&color=000000" alt="Shopping Cart" width="100" />
         </Button>
       </Link>
     </div>
