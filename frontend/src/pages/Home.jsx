@@ -36,11 +36,13 @@ const Home = () => {
           </Grid>
         ))}
       </Grid>
+      <div className='cartposition'>
       <Link to="/cart">
         <Button variant="contained" color="primary" >
         <FiShoppingCart className='shoppingCart' />
         </Button>
       </Link>
+      </div>
     </div>
   );
 };
