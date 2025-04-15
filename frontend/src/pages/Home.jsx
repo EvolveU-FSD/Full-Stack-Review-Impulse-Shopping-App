@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react';
-import { useCart } from '../context/CartContext';
+// import { useCart } from '../context/CartContext';
 import { Card, CardContent, CardMedia, Button, Typography, Grid } from '@mui/material';
 import { Link } from 'react-router-dom';
+import  CartButton  from '../components/CartButton';
 
 const Home = () => {
   const [items, setItems] = useState([]);
-  const { addToCart } = useCart();
+  // const { addToCart } = useCart();
 
   useEffect(() => {
     fetch('http://localhost:3000/api/items')
@@ -28,7 +29,8 @@ const Home = () => {
                 <Typography>{item.description}</Typography>
                 <Typography>${item.price.toFixed(2)}</Typography>
                 <Typography>Regret Level: {renderRegretLevel(item.regretLevel)}</Typography>
-                <Button variant="contained" onClick={() =>{ console.log("adding to cart: ", item); addToCart(item)}}>Add to Cart</Button>
+                <CartButton item={item} />
+                {/* <Button variant="contained" onClick={() =>{ console.log("adding to cart: ", item); addToCart(item)}}>Add to Cart</Button> */}
               </CardContent>
             </Card>
           </Grid>
