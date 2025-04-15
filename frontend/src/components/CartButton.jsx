@@ -1,17 +1,19 @@
 import { useCart } from "../context/CartContext"; 
 import { Button, Snackbar } from "@mui/material";
 import Alert from "@mui/material/Alert";
-// import { useState, useEffect } from "react";
+import { useState } from "react";
 
 export default function CartButton({ item }) {
-    // const [toggle, setToggle] = useState(false);
+    const [open, setOpen] = useState(false);
     const { addToCart } = useCart();
 
   const handleAddToCart = () => {
     console.log("adding to cart: ", item);
       addToCart(item);
-    //   setToggle(!toggle);
+      setOpen(true);
     };
+
+
     
     // useEffect(() => {
     //     const timer = setTimeout(() => {
@@ -28,9 +30,9 @@ export default function CartButton({ item }) {
             </Button>
             <Snackbar
                 anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
-                open={false}
+                open={open}
                 autoHideDuration={1500}
-                onClose={handleAddToCart}
+                onClose={() => setOpen(false)}
                 message="Item added to cart"
             />
             {/* { toggle ? <Alert severity="info" style={{ marginTop: "10px" }}>item added to Cart</Alert> : null } */}
