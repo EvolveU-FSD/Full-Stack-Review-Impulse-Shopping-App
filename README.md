@@ -20,6 +20,25 @@ Then, you’ll:
 
 ## 🧭 Step 1: Orientation
 
+## To Start
+
+git clone https://github.com/EvolveU-FSD/Full-Stack-Review-Impulse-Shopping-App.git
+
+## Install Dependencies on Both Server and Frontend Folder
+
+## from root directory
+cd server
+npm i
+## Start the App:
+npm run dev
+
+## from root directory
+cd frontend
+npm i
+## Start the App:
+npm run dev
+
+
 Start by running the app and exploring it:
 - Browse silly items.
 - Add things to your cart.
