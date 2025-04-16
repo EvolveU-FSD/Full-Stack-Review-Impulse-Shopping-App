@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react';
 import { Card, CardContent, CardMedia, Button, Typography, Grid } from '@mui/material';
 import { Link } from 'react-router-dom';
 import  CartButton  from '../components/CartButton';
+import { FiShoppingCart } from "react-icons/fi";
+
 
 const Home = () => {
   const [items, setItems] = useState([]);
@@ -36,11 +38,13 @@ const Home = () => {
           </Grid>
         ))}
       </Grid>
+      <div className='cartposition'>
       <Link to="/cart">
-        <Button variant="contained" color="primary" style={{ marginTop: '20px' }}>
-          View Cart
+        <Button variant="contained" color="primary" >
+        <FiShoppingCart className='shoppingCart' />
         </Button>
       </Link>
+      </div>
     </div>
   );
 };

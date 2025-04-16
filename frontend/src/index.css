@@ -12,3 +12,22 @@ body {
   button {
     cursor: pointer;
   }
+
+  .shoppingCart {
+
+    margin-top: 20px;
+    min-width: 70px;
+    font-size: 5em;
+    
+  }
+
+  .cartposition {
+    position: fixed;
+    margin-top: 0;
+    margin-right: 0;
+    right: 0;
+    top:0;
+    width:150px;
+    height:150px;
+    z-index: 1000;
+  }
