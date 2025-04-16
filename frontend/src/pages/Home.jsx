@@ -30,7 +30,10 @@ const Home = () => {
                 <Typography>{item.description}</Typography>
                 <Typography>${item.price.toFixed(2)}</Typography>
                 <Typography>Regret Level: {renderRegretLevel(item.regretLevel)}</Typography>
-                <Button variant="contained" onClick={() =>{ console.log("adding to cart: ", item); addToCart(item)}}>Add to Cart</Button>
+                <Button variant="contained" onClick={() => {
+                  console.log("adding to cart: ", item); 
+                  addToCart(item)
+                }}>Add to Cart</Button>
               </CardContent>
             </Card>
           </Grid>

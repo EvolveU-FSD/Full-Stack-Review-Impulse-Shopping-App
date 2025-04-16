@@ -12,7 +12,8 @@ const Cart = () => {
         <List>
           {cart.map(item => (
             <ListItem key={item._id}>
-              <ListItemText primary={item.name} secondary={`$${item.price.toFixed(2)}`} />
+              <ListItemText primary={item.name} secondary={`$${item.totalPrice.toFixed(2) || 0}`} />
+              <ListItemText secondary={item.cartQuantity} />
               <Button color="error" onClick={() => removeFromCart(item._id)}>Remove</Button>
             </ListItem>
           ))}
